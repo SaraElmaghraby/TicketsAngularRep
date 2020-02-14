@@ -12,5 +12,6 @@ export class UserItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  @Input("userInfo") user: any = {}
 
 }

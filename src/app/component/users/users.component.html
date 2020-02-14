@@ -1,0 +1,6 @@
+<div>
+    <h1><u>Users Demo</u></h1>
+    <!-- <app-user-item> {{users.name}}</app-user-item> -->
+    <app-user-item *ngFor="let user of users" [userInfo] = "user"> </app-user-item>
+
+</div>
