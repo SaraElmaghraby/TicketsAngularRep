@@ -9,7 +9,7 @@ import { ActivatedRoute ,Router} from '@angular/router';
 })
 export class UserDetailsComponent implements OnInit {
   id
-  user = {}
+  user: any = {}
   
 
   constructor(private myService:UsersService , private myActivateRoute:ActivatedRoute , private router:Router) { 
