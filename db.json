@@ -1,0 +1,46 @@
+{
+    "users":[
+        {
+            "id": 1, 
+           "name" : "jooo",
+            "age" : 20,
+            "email" : "test@gmail.com"
+        },
+        {
+            "id": 2,
+            "name" : "ahmed",
+             "age" : 20,
+             "email" : "ahmed@gmail.com"
+         },
+         {
+            "id": 3,
+            "name" : "mohamed",
+             "age" : 20,
+             "email" : "mohamed@gmail.com"
+         },
+         {
+            "id": 4,
+            "name" : "hamada",
+             "age" : 20,
+             "email" : "hamada@gmail.com"
+         }
+    ],
+    "products" : [
+        {
+            "id" : 1,
+            "Pname" : "tea"
+        },
+        {
+            "id" : 2,
+            "Pname" : "coffe"
+        },
+        {
+            "id" : 3,
+            "Pname" : "milkshik"
+        },
+        {
+            "id" : 4,
+            "Pname" : "lattea"
+        }
+    ]
+}
