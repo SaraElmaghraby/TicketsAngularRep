@@ -7,12 +7,14 @@ import { RegisterComponentComponent } from '../Component/register-component/regi
 import { OrderListComponentComponent } from '../Component/order-list-component/order-list-component.component';
 import { OrderDetailsComponentComponent } from '../Component/order-details-component/order-details-component.component';
 import { NotFoundComponentComponent } from '../Component/not-found-component/not-found-component.component';
+import { FooterComponent } from '../Component/footer/footer.component';
 
 
 
 
 const routes:Routes = [
   {path:"homepage" , component: HomePageComponentComponent }, 
+  {path:"homepage/footer" , component: FooterComponent }, 
   {path:"" , redirectTo:"homepage" , pathMatch:"full"}, 
   {path:"homepage/login" , component:  LoginComponentComponent },
   {path:"homepage/register" , component:  RegisterComponentComponent },
@@ -20,6 +22,7 @@ const routes:Routes = [
   {path:"homepage/order" , redirectTo:"homepage/orderlist" , pathMatch:"full" },
   {path:"homepage/orderlist/orderdetails" , component:  OrderDetailsComponentComponent },
   {path:"**" , component: NotFoundComponentComponent },
+
 ]
 
 @NgModule({

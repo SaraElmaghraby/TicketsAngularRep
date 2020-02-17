@@ -11,6 +11,7 @@ import { OrderListComponentComponent } from './Component/order-list-component/or
 import { OrderDetailsComponentComponent } from './Component/order-details-component/order-details-component.component';
 import { AdminOrderListComponentComponent } from './Component/admin-order-list-component/admin-order-list-component.component';
 import { NotFoundComponentComponent } from './Component/not-found-component/not-found-component.component';
+import { FooterComponent } from './Component/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NotFoundComponentComponent } from './Component/not-found-component/not-
     OrderDetailsComponentComponent,
     AdminOrderListComponentComponent,
     NotFoundComponentComponent,
+    FooterComponent,
 
    
   ],
