@@ -1,26 +1,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule,Routes } from "@angular/router"
-import { NotFoundComponent } from '../component/not-found/not-found.component'
-import { UserDetailsComponent } from "../component/user-details/user-details.component"
-import { UserItemComponent } from "../component/user-item/user-item.component"
-import { UsersComponent } from '../component/users/users.component';
+import { HomePageComponentComponent } from '../Components/home-page-component/home-page-component.component';
+import { LoginComponentComponent } from '../Component/login-component/login-component.component';
+import { RegisterComponentComponent } from '../Component/register-component/register-component.component';
+import { OrderListComponentComponent } from '../Component/order-list-component/order-list-component.component';
+import { OrderDetailsComponentComponent } from '../Component/order-details-component/order-details-component.component';
+import { NotFoundComponentComponent } from '../Component/not-found-component/not-found-component.component';
+
 
 
 
 const routes:Routes = [
-  {path:"users" , component: UsersComponent }, 
-  {path:"" , redirectTo:"users" , pathMatch:"full"}, 
-  {path:"users/:id" , component: UserDetailsComponent },
-  {path:"**" , component: NotFoundComponent },
+  {path:"homepage" , component: HomePageComponentComponent }, 
+  {path:"" , redirectTo:"homepage" , pathMatch:"full"}, 
+  {path:"homepage/login" , component:  LoginComponentComponent },
+  {path:"homepage/register" , component:  RegisterComponentComponent },
+  {path:"homepage/orderlist" , component:  OrderListComponentComponent },
+  {path:"homepage/order" , redirectTo:"homepage/orderlist" , pathMatch:"full" },
+  {path:"homepage/orderlist/orderdetails" , component:  OrderDetailsComponentComponent },
+  {path:"**" , component: NotFoundComponentComponent },
 ]
 
 @NgModule({
   declarations: [
-    NotFoundComponent,
-    UserDetailsComponent,
-    UserItemComponent,
-    UsersComponent
+   
   ],
   imports: [
     CommonModule,
