@@ -1,38 +1,39 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+// import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
+import { RouterModule } from '@angular/router'; // add this line
 import { AppRoutingModule } from "./app-routing/app-routing.module"
 import { AppComponent } from './app.component';
 import { UsersService } from './services/users.service';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponentComponent } from './Component/login-component/login-component.component';
-import { RegisterComponentComponent } from './Component/register-component/register-component.component';
-import { OrderListComponentComponent } from './Component/order-list-component/order-list-component.component';
-import { OrderDetailsComponentComponent } from './Component/order-details-component/order-details-component.component';
-import { AdminOrderListComponentComponent } from './Component/admin-order-list-component/admin-order-list-component.component';
-import { NotFoundComponentComponent } from './Component/not-found-component/not-found-component.component';
-import { FooterComponent } from './Component/footer/footer.component';
-import { HomePageComponentComponent } from './Component/home-page-component/home-page-component.component';
-
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { TodoComponent } from './todo/todo.component';
+import { app } from 'firebase';
+import { FormsModule } from '@angular/forms';
 @NgModule({
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     AppComponent,
-    HomePageComponentComponent,
-    LoginComponentComponent,
-    RegisterComponentComponent,
-    OrderListComponentComponent,
-    OrderDetailsComponentComponent,
-    AdminOrderListComponentComponent,
-    NotFoundComponentComponent,
-    FooterComponent,
-
+    TodoComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+   AngularFirestoreModule,
+   FormsModule,
+   RouterModule.forRoot([
+    { path: '', component: TodoComponent },
+  ])
    
   ],
+ 
   providers: [
     UsersService
   ],

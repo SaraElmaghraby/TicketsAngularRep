@@ -1,0 +1,28 @@
+<div class="jumbotron" style="padding: 45px 0px">
+    <h4 class="text-center">ToDo List App</h4>
+</div>
+<div class="input-group">
+    <input type="text" class="form-control" [(ngModel)]="todoTitle" #titleItem>
+    <div class="input-group-addon hover-cursor" (click)="onAdd()">
+        <i class="fa fa-plus-circle fa-2x "></i>
+    </div>
+</div>
+
+<div style="margin:5px 0px">
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of todos">
+            <span class="hover-cursor">
+                <input type="checkbox" class="fa fa-lg" [(ngModel)]="item.isChecked" (change)="update(item)">
+            </span>
+                {{item.title}}
+                <span class="hover-cursor text-danger pull-right">
+                    <!-- <i class="fa fa-circle fa-lg text-success" title="Low" click()></i>
+                    <i class="fa fa-circle fa-lg text-warning" title="Medium" (click)=""></i>
+                    <i class="fa fa-circle fa-lg text-danger" title="High" (click)=""></i> -->
+                    <i class="fa fa-trash-o fa-lg " (click)="delete(item.id)"></i>
+                  
+                </span>
+        </li>
+    </ul>
+
+</div>
