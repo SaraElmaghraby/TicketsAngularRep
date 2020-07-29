@@ -1,0 +1,63 @@
+<div class="container text-center col-md-12 " >
+<div *ngIf="currentTicket" class="edit-form">
+    <h4>Ticket</h4>
+    <form>
+      <div class="form-group">
+        <label for="title">Name</label>
+        <input class="form-control"
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="currentTicket.name"
+          name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="Content">Content</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="currentTicket.ticketsContent"
+          name="description"
+        />
+      </div>
+      <div class="form-group">
+        <label for="Content">Status</label>
+        <input
+          type="text"
+          class="form-control"
+          id="status"
+          [(ngModel)]="currentTicket.status"
+          name="status"
+        />
+      </div>
+      <div class="form-group">
+        <label for="Content">Creation Date</label>
+        <input
+          type="datetime"
+          class="form-control"
+          id="creation"
+          [(ngModel)]="currentTicket.creationDate"
+          name="creation"
+        />
+      </div>
+  
+      <!-- <div class="form-group">
+        <label><strong>Status:</strong></label>
+        {{ currentTutorial.published ? "Published" : "Pending" }}
+      </div> -->
+    </form>
+  
+    
+  
+    <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
+      Delete
+    </button>
+  
+    <button type="submit" class="badge badge-success" (click)="updateTicket()">
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+</div>

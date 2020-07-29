@@ -1,9 +1,22 @@
-<div class="Container">
-    <div class="row">
-        <div class="col-md-6 offset-3">
-           
-            <app-todo></app-todo>
+<div class="Container text-center">
+  <div class="row">
+    <div>
+      <!-- <nav class="navbar navbar-expand navbar-dark bg-dark"> -->
+        <a href="/tutorials" class="navbar-brand fa-ticket">Tickets Task</a>
+        <!-- <div class="navbar-nav mr-auto">
+          
+          <li class="nav-item"> -->
+            <!-- <a routerLink="add" class="nav-link">Add</a> -->
+          <!-- </li>
         </div>
+      </nav> -->
+
+      <div class="container ">
+        <router-outlet></router-outlet>
+        <!-- <app-tickets-list></app-tickets-list>
+        <app-ticket-details></app-ticket-details> -->
+      </div>
     </div>
+  </div>
 
 </div>

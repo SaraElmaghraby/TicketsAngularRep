@@ -1,11 +1,11 @@
 // import { Component } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import {TodoService} from './todo.service';
+import { TicketService } from 'src/app/services/ticket.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers:[TodoService]
+  providers:[TicketService]
 
 })
 export class AppComponent {

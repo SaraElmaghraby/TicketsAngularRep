@@ -1,0 +1,49 @@
+<div class="container text-center" style="margin: auto;">
+    <div class=" row">
+      <!-- <div class="col-md-4">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search by ticket id" [(ngModel)]="id" />
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" (click)="searchLog()">
+              Search
+            </button>
+          </div>
+        </div>
+      </div> -->
+      <div class="col-lg-12">
+        <h4>Tickets List</h4>
+        
+          <table class="table table-striped" *ngFor="let log of logs; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveTutorial(tutorial, i)">
+            <thead>
+              <tr>
+                <!-- <th scope="col">#</th> -->
+                <th scope="col">ticket Id</th>
+                <th scope="col">userId</th>
+                <th scope="col">action</th>
+                <th scope="col">log Time</th>
+               
+                <!-- <th scope="col"></th> -->
+  
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <!-- <th scope="row">1</th> -->
+                <td><a href="/tickets/{{ log.ticketId }}">{{ log.ticketId }}</a></td>
+                <td>{{ log.userId }}</td>
+                <td>{{ log.action }}</td>
+                <td>{{ log.logDateTime }}</td>
+                
+                <!-- <td><a class="fa fa-edit" href="/tickets/{{ ticket.id }}" ></a></td> -->
+  
+              </tr>
+            </tbody>
+          </table>
+        
+  
+      </div>
+      
+    </div>
+  </div>

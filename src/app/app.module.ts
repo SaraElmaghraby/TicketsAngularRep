@@ -10,27 +10,30 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
-import { TodoComponent } from './todo/todo.component';
 import { app } from 'firebase';
 import { FormsModule } from '@angular/forms';
+import { TicketDetailsComponent } from './components/ticket-details/ticket-details.component';
+import { TicketsListComponent } from './components/tickets-list/tickets-list.component';
+import { LogComponent } from './components/log/log.component';
 @NgModule({
   // schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     AppComponent,
-    TodoComponent,
+    TicketDetailsComponent,
+    TicketsListComponent,
+    LogComponent,
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
    AngularFirestoreModule,
    FormsModule,
-   RouterModule.forRoot([
-    { path: '', component: TodoComponent },
-  ])
+  //  RouterModule.forRoot([
+  //   { path: '', component:  },
+  // ])
    
   ],
  
